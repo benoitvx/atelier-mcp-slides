@@ -20,7 +20,7 @@ export function Slide19DemoAppChatgpt({ totalSlides }: SlideProps) {
         height: '100%'
       }}>
         <img
-          src="/images/demos/demo-chatgpt-bornes-recharge.gif"
+          src={`${import.meta.env.BASE_URL}images/demos/demo-chatgpt-bornes-recharge.gif`}
           alt="Démonstration de l'App ChatGPT data.gouv - recherche de bornes de recharge"
           style={{
             maxWidth: '100%',

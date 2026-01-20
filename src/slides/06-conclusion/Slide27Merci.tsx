@@ -34,7 +34,7 @@ export function Slide27Merci({ totalSlides }: SlideProps) {
             flexShrink: 0
           }}>
             <img
-              src="/images/benoitvinceneux.png"
+              src={`${import.meta.env.BASE_URL}images/benoitvinceneux.png`}
               alt="Benoit Vinceneux"
               style={{
                 width: '100%',

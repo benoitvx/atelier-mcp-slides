@@ -20,7 +20,7 @@ export function Slide17DemoDatagouvMcp({ totalSlides }: SlideProps) {
         height: '100%'
       }}>
         <img
-          src="/images/demos/mcp_datagouv.gif"
+          src={`${import.meta.env.BASE_URL}images/demos/mcp_datagouv.gif`}
           alt="Démonstration du serveur MCP data.gouv dans l'Assistant IA"
           style={{
             maxWidth: '100%',
