@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Atelier MCP - Slides de présentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Présentation interactive pour un atelier de 45 minutes sur les **MCP (Model Context Protocol)**.
 
-Currently, two official plugins are available:
+**[Voir la présentation en ligne](https://benoitvx.github.io/atelier-mcp-slides/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Contexte
 
-## React Compiler
+- **Public** : Agents publics non-techniques (réseau ALLiaNCE)
+- **Présentateur** : Benoit Vinceneux, EIG CPO Données & MCP @ Etalab/DINUM
+- **Durée** : 45 minutes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Contenu
 
-## Expanding the ESLint configuration
+27 slides organisées en 6 sections :
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Introduction** (3 slides) - Présentation et objectifs
+2. **Ice breaker** (1 slide) - Sondage interactif
+3. **Pédagogie MCP** (11 slides) - Concepts, architecture, comparaisons
+4. **Exemples concrets** (7 slides) - Démos et cas d'usage dans l'État
+5. **Usages** (3 slides) - Checklist et ressources
+6. **Conclusion** (2 slides) - Questions et contacts
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Stack technique
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React 18 + TypeScript + Vite
+- [@codegouvfr/react-dsfr](https://react-dsfr.codegouv.studio/) - Design System de l'État français
+- CSS Modules
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Installation
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Développement
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Déploiement
+
+Le site est automatiquement déployé sur GitHub Pages via GitHub Actions à chaque push sur `main`.
+
+## Licence
+
+MIT
