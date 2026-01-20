@@ -4,7 +4,7 @@ interface SlideProps {
   totalSlides: number
 }
 
-export function Slide01Titre({ totalSlides }: SlideProps) {
+export function Slide01Titre({ totalSlides: _totalSlides }: SlideProps) {
   return (
     <div style={{
       minHeight: '100vh',
